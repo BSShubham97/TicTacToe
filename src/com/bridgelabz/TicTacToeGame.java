@@ -48,8 +48,26 @@ public class TicTacToeGame {
         System.out.println( "|" + board[1] + "|" + board[2] + "|" + board[3] + "|" + "\n" + "-------" + "\n" +
                             "|" + board[4] + "|" + board[5] + "|" + board[6] + "|" + "\n" + "-------" + "\n" +
                             "|" + board[7] + "|" + board[8] + "|" + board[9] + "|");
-        System.out.print("-------");
+        System.out.print("-------\n");
     }
+
+    /**
+     * Check empty
+     */
+    public void checkPostionEmpty() {
+        System.out.print("Enter the postion(between 1 to 9): ");
+        int position = input.nextInt();
+        if (position > 0 && position < 10) {
+            if (board[position] != ' ') {
+                System.out.println("Postion Occupied !");
+            } else {
+                System.out.println("Position Free!");
+                board[position] = userEntry;
+            }
+        }
+    }
+
 }
+
 
 

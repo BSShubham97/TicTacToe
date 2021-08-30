@@ -6,5 +6,8 @@ public class TicTacToeMain {
         ticTacToeGame.createNewBoard();
         ticTacToeGame.userOption();
         ticTacToeGame.displayBoard();
+        ticTacToeGame.checkPostionEmpty();
+        ticTacToeGame.displayBoard();
+        ticTacToeGame.checkPostionEmpty();
     }
 }
