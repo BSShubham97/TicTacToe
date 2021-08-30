@@ -8,6 +8,6 @@ public class TicTacToeMain {
         ticTacToeGame.displayBoard();
         ticTacToeGame.checkPostionEmpty();
         ticTacToeGame.displayBoard();
-        ticTacToeGame.checkPostionEmpty();
+        ticTacToeGame.printEmptySpaces();
     }
 }

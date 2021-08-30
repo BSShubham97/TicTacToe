@@ -1,9 +1,11 @@
 package com.bridgelabz;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToeGame {
-    Scanner input= new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
+    Random random = new Random();
     char[] board = new char[10];
     char userEntry, computerEntry;
 
@@ -11,8 +13,9 @@ public class TicTacToeGame {
         for (int i = 0; i < board.length; i++) {
             board[i] = ' ';
         }
-        System.out.println( board);
+        System.out.println(board);
     }
+
     /**
      * Method to take user input X or O
      */
@@ -24,14 +27,14 @@ public class TicTacToeGame {
             case 1:
                 userEntry = 'X';
                 computerEntry = 'O';
-                System.out.println("User entry will be: "+userEntry);
-                System.out.println("Computer entry will be: "+computerEntry);
+                System.out.println("User entry will be: " + userEntry);
+                System.out.println("Computer entry will be: " + computerEntry);
                 break;
             case 2:
                 userEntry = 'O';
                 computerEntry = 'X';
-                System.out.println("User entry will be: "+userEntry);
-                System.out.println("Computer entry will be: "+computerEntry);
+                System.out.println("User entry will be: " + userEntry);
+                System.out.println("Computer entry will be: " + computerEntry);
                 break;
             default:
                 System.out.println("Select proper option!!!");
@@ -45,9 +48,9 @@ public class TicTacToeGame {
     public void displayBoard() {
         System.out.println("_BOARD_");
         System.out.println("_______");
-        System.out.println( "|" + board[1] + "|" + board[2] + "|" + board[3] + "|" + "\n" + "-------" + "\n" +
-                            "|" + board[4] + "|" + board[5] + "|" + board[6] + "|" + "\n" + "-------" + "\n" +
-                            "|" + board[7] + "|" + board[8] + "|" + board[9] + "|");
+        System.out.println("|" + board[1] + "|" + board[2] + "|" + board[3] + "|" + "\n" + "-------" + "\n" +
+                "|" + board[4] + "|" + board[5] + "|" + board[6] + "|" + "\n" + "-------" + "\n" +
+                "|" + board[7] + "|" + board[8] + "|" + board[9] + "|");
         System.out.print("-------\n");
     }
 
@@ -63,11 +66,22 @@ public class TicTacToeGame {
             } else {
                 System.out.println("Position Free!");
                 board[position] = userEntry;
+                position = random.nextInt(8) + 1;
+                board[position] = computerEntry;
+            }
+        }
+    }
+        /**
+         *  UC-5 : To show empty empty spaces position
+         */
+        public void printEmptySpaces () {
+            System.out.println("Empty Positions are: ");
+            for (int i = 1; i < board.length; i++) {
+                if (board[i] == ' ') {
+                    System.out.print( i + "\t");
+                }
             }
         }
     }
 
-}
-
-
-
+ 
