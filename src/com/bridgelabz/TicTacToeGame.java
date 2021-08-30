@@ -82,6 +82,27 @@ public class TicTacToeGame {
                 }
             }
         }
+    /**
+     * Toss to check who plays first
+     */
+ public void toss(){
+     int head=1, tail=0;
+     boolean isPlayerFirst= false;
+     System.out.print("Enter your call(1.Head / 0.Tail): ");
+     int playerCall = input.nextInt();
+     int tossFaceValue= random.nextInt(1);
+     System.out.println("Toss gave:"+tossFaceValue);
+     if(playerCall==tossFaceValue){
+         System.out.println( "USER WINS the toss he plays first.");
+         isPlayerFirst=true;
+     }else{
+         System.out.println("COMPUTER WINS the toss it plays first");
+         isPlayerFirst=false;
+     }
+ }
+
+
+
     }
 
  
