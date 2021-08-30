@@ -5,5 +5,6 @@ public class TicTacToeMain {
         TicTacToeGame ticTacToeGame= new TicTacToeGame();
         ticTacToeGame.createNewBoard();
         ticTacToeGame.userOption();
+        ticTacToeGame.displayBoard();
     }
 }
